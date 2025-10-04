@@ -1076,3 +1076,45 @@ Node.js v20.19.5
 📊 Health check: http://localhost:5001/api/health
 ✅ Connected to PostgreSQL database
 ✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T18:18:28.270Z] API call to /api/investments from ::1
+[2025-10-04T18:18:28.275Z] API call to /api/investments from ::1
+[2025-10-04T18:18:34.303Z] API call to /api/investments from ::1
+[2025-10-04T18:18:34.306Z] API call to /api/investments from ::1
+[2025-10-04T18:18:36.654Z] API call to /api/content/home from ::1
+[2025-10-04T18:18:36.659Z] API call to /api/content/home from ::1
+[2025-10-04T18:18:37.445Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T18:18:37.445Z] API call to /api/branding from ::1
+[2025-10-04T18:18:37.447Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T18:18:37.448Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T18:19:18.985Z] API call to /api/investments from ::1
+[2025-10-04T18:19:18.988Z] API call to /api/investments from ::1
+[2025-10-04T18:19:37.891Z] API call to /api/branding from ::1
+[2025-10-04T18:19:37.931Z] API call to /api/investments from ::1
+[2025-10-04T18:19:37.933Z] API call to /api/content/home from ::1
+[2025-10-04T18:19:37.934Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T18:19:37.957Z] API call to /api/branding from ::1
+[2025-10-04T18:19:37.959Z] API call to /api/branding from ::1
+[2025-10-04T18:19:37.959Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T18:19:37.964Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T18:19:42.876Z] API call to /api/content/about from ::1
+[2025-10-04T18:19:43.878Z] API call to /api/content/investment-classes from ::1
+[2025-10-04T18:19:48.628Z] API call to /api/content/portfolio from ::1
+[2025-10-04T18:20:15.123Z] API call to /api/branding from ::1
+[2025-10-04T18:20:15.129Z] API call to /api/content/portfolio from ::1
+[2025-10-04T18:20:15.130Z] API call to /api/branding from ::1
+[2025-10-04T18:20:15.137Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T18:20:15.137Z] API call to /api/branding from ::1
+[2025-10-04T18:20:15.149Z] API call to /api/branding from ::1
+[2025-10-04T18:20:15.151Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
