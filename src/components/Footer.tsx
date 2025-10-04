@@ -2,6 +2,13 @@ import { Link } from 'react-router-dom';
 import { MapPin, Mail, Phone, Linkedin } from 'lucide-react';
 import { useBranding, useFooterLinks } from '../hooks/useBranding';
 
+interface FooterLink {
+  id: number;
+  label: string;
+  url: string;
+  is_external: boolean;
+}
+
 const Footer = () => {
   const { branding } = useBranding();
   const { footerLinks } = useFooterLinks();
@@ -38,7 +45,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {footerLinks.length > 0 ? (
-                footerLinks.map((link: any) => (
+                footerLinks.map((link: FooterLink) => (
                   <li key={link.id}>
                     {link.is_external ? (
                       <a 

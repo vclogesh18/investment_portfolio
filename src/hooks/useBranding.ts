@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Branding, FooterLink } from '../types';
 
 const API_BASE_URL = 'http://localhost:5001/api';
 
 // Hook for fetching branding settings (frontend)
 export const useBranding = () => {
-  const [branding, setBranding] = useState<Record<string, any>>({});
+  const [branding, setBranding] = useState<Branding>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -35,7 +36,7 @@ export const useBranding = () => {
 
 // Hook for fetching footer links (frontend)
 export const useFooterLinks = () => {
-  const [footerLinks, setFooterLinks] = useState<any[]>([]);
+  const [footerLinks, setFooterLinks] = useState<FooterLink[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

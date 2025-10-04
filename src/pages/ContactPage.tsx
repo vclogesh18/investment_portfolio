@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { usePageContent } from '../hooks/usePageContent';
 import { LoadingState, ErrorState } from '../components/LoadingComponents';
 
 const ContactPage = () => {
-  const { loading, error, hero, sections, features } = usePageContent('contact');
+  const { loading, error, hero, features } = usePageContent('contact');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -44,7 +44,6 @@ const ContactPage = () => {
   }
 
   // Get contact info from API
-  const contactInfoSection = sections.find((section: any) => section.section_name === 'contact_info');
   const formConfigSection = features?.find((feature: any) => feature.section_name === 'contact_form_config');
   const officeLocationsSection = features?.find((feature: any) => feature.section_name === 'office_locations');
 

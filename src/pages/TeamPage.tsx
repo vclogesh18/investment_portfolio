@@ -16,7 +16,7 @@ import AniruddhRamesh from '../images/teams/Aniruddh-Ramesh.jpg';
 const TeamPage = () => {
   const { data: teamMembers, loading, error } = useTeamMembers();
   const { data: pageContent, loading: pageLoading, error: pageError } = usePageContent('team');
-  const { teamImageMap, loading: mediaLoading } = useTeamMedia();
+  const { teamImageMap } = useTeamMedia();
 
   // Fallback image mapping when media system is not available
   const fallbackImageMap: { [key: string]: string } = {

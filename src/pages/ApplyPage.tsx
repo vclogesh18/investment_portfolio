@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Upload, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 import { usePageContent } from '../hooks/usePageContent';
 import { LoadingState, ErrorState } from '../components/LoadingComponents';
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useBrandMedia } from '../hooks/useMedia';
@@ -16,9 +16,6 @@ const Header = () => {
   const logoSrc = branding.logo_alt_text?.media_path 
     ? `http://localhost:5001${branding.logo_alt_text.media_path}` 
     : brandImageMap['SEVEN-BOSON-LOGO'] || sblogo;
-
-  // Get company name from branding settings
-  const companyName = branding.company_name?.value || 'Seven Boson Group';
 
   useEffect(() => {
     const handleScroll = () => {

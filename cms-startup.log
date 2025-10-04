@@ -1064,3 +1064,15 @@ Node.js v20.19.5
 ✅ Connected to PostgreSQL database
 ✅ Connected to PostgreSQL database
 [2025-10-04T17:23:01.735Z] API call to /api/branding from ::1
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database

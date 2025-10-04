@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { usePortfolioCompanies, usePageContent } from '../hooks/useApi';
 import { usePortfolioMedia } from '../hooks/useMedia';
