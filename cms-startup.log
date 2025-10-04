@@ -1,0 +1,1066 @@
+🚀 Starting Seven Boson Group CMS...
+
+📦 Installing any missing dependencies...
+
+🔥 Starting servers...
+
+Starting backend API server on port 5001...
+
+> seven-boson-cms-backend@1.0.0 dev
+> nodemon server.js
+
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+Starting admin panel on port 3001...
+
+✅ Seven Boson Group CMS is starting up!
+
+🌐 Backend API: http://localhost:5001
+🖥️  Admin Panel: http://localhost:3001
+
+📧 Login credentials:
+   Email: admin@sevenboson.com
+   Password: admin123
+
+⚡ Press Ctrl+C to stop all servers
+
+
+> seven-boson-admin-panel@1.0.0 dev
+> vite
+
+
+  VITE v4.5.14  ready in 82 ms
+
+  ➜  Local:   http://localhost:3001/
+  ➜  Network: use --host to expose
+[2025-10-04T06:37:12.697Z] API call to /api/pages/team from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T06:37:39.117Z] API call to /api/content/team from ::1
+[2025-10-04T06:37:45.688Z] API call to /api/content/team from ::1
+[2025-10-04T06:38:03.112Z] API call to /api/content/team from ::1
+[2025-10-04T06:38:42.190Z] API call to /api/content/contact from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T06:38:43.170Z] API call to /api/content/team from ::1
+[2025-10-04T06:38:43.471Z] API call to /api/content/team from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T06:38:54.120Z] API call to /api/content/apply from ::1
+[2025-10-04T06:38:55.447Z] API call to /api/content/contact from ::1
+[2025-10-04T06:38:59.655Z] API call to /api/content/team from ::1
+[2025-10-04T06:38:59.936Z] API call to /api/content/team from ::1
+[2025-10-04T06:39:21.683Z] API call to /api/content/home from ::1
+[2025-10-04T06:39:21.686Z] API call to /api/content/home from ::1
+[2025-10-04T06:39:24.321Z] API call to /api/content/about from ::1
+[2025-10-04T06:39:24.324Z] API call to /api/content/about from ::1
+[2025-10-04T06:39:25.203Z] API call to /api/content/portfolio from ::1
+[2025-10-04T06:39:25.206Z] API call to /api/content/portfolio from ::1
+[2025-10-04T06:39:26.295Z] API call to /api/content/team from ::1
+[2025-10-04T06:39:26.298Z] API call to /api/content/team from ::1
+[2025-10-04T06:39:27.982Z] API call to /api/content/contact from ::1
+[2025-10-04T06:39:27.985Z] API call to /api/content/contact from ::1
+[2025-10-04T06:39:30.797Z] API call to /api/content/apply from ::1
+[2025-10-04T06:39:36.245Z] API call to /api/content/apply from ::1
+[2025-10-04T06:39:36.249Z] API call to /api/content/apply from ::1
+[2025-10-04T06:39:45.445Z] API call to /api/content/apply from ::1
+[2025-10-04T06:39:48.481Z] API call to /api/content/apply from ::1
+[2025-10-04T06:39:56.961Z] API call to /api/content/apply from ::1
+[2025-10-04T06:39:58.984Z] API call to /api/content/apply from ::1
+[2025-10-04T06:40:12.216Z] API call to /api/content/investment-classes from ::1
+[2025-10-04T06:40:12.219Z] API call to /api/content/investment-classes from ::1
+[2025-10-04T06:40:24.862Z] API call to /api/content/investment-classes from ::1
+[2025-10-04T06:40:28.091Z] API call to /api/content/contact from ::1
+[2025-10-04T06:40:28.094Z] API call to /api/content/contact from ::1
+[2025-10-04T06:40:30.365Z] API call to /api/content/team from ::1
+[2025-10-04T06:40:30.368Z] API call to /api/content/team from ::1
+[2025-10-04T06:40:32.948Z] API call to /api/content/portfolio from ::1
+[2025-10-04T06:40:32.950Z] API call to /api/content/portfolio from ::1
+[2025-10-04T06:40:35.517Z] API call to /api/content/about from ::1
+[2025-10-04T06:40:35.520Z] API call to /api/content/about from ::1
+[2025-10-04T06:40:41.342Z] API call to /api/content/about from ::1
+12:13:15 PM [vite] hmr update /src/components/UniversalPageEditor.jsx
+[2025-10-04T06:43:15.807Z] API call to /api/content/about from ::1
+✅ Connected to PostgreSQL database
+12:13:28 PM [vite] hmr update /src/components/UniversalPageEditor.jsx
+[2025-10-04T06:43:28.809Z] API call to /api/content/about from ::1
+12:13:37 PM [vite] hmr update /src/components/UniversalPageEditor.jsx
+[2025-10-04T06:43:37.801Z] API call to /api/content/about from ::1
+12:13:52 PM [vite] hmr update /src/components/ContentFieldEditor.jsx
+12:14:02 PM [vite] hmr update /src/components/ContentFieldEditor.jsx
+✅ Connected to PostgreSQL database
+[2025-10-04T06:46:46.297Z] API call to /api/content/home from ::1
+[2025-10-04T06:46:46.301Z] API call to /api/content/home from ::1
+[2025-10-04T06:47:01.651Z] API call to /api/content/home from ::1
+[2025-10-04T06:47:05.211Z] API call to /api/content/about from ::1
+[2025-10-04T06:47:05.214Z] API call to /api/content/about from ::1
+[2025-10-04T06:47:16.938Z] API call to /api/content/about from ::1
+[2025-10-04T06:47:40.944Z] API call to /api/content/about from ::1
+[2025-10-04T06:47:46.626Z] API call to /api/content/about from ::1
+[2025-10-04T06:47:48.753Z] API call to /api/content/portfolio from ::1
+[2025-10-04T06:47:48.756Z] API call to /api/content/portfolio from ::1
+[2025-10-04T06:47:51.867Z] API call to /api/content/team from ::1
+[2025-10-04T06:47:51.871Z] API call to /api/content/team from ::1
+[2025-10-04T06:47:55.111Z] API call to /api/content/contact from ::1
+[2025-10-04T06:47:55.114Z] API call to /api/content/contact from ::1
+[2025-10-04T06:47:57.191Z] API call to /api/content/investment-classes from ::1
+[2025-10-04T06:47:57.194Z] API call to /api/content/investment-classes from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T06:48:02.328Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T06:48:02.331Z] API call to /api/investments from ::1
+[2025-10-04T06:48:04.067Z] API call to /api/investments from ::1
+[2025-10-04T06:48:04.073Z] API call to /api/investments from ::1
+12:19:04 PM [vite] hmr update /src/pages/Dashboard.jsx
+12:19:12 PM [vite] hmr update /src/pages/Dashboard.jsx
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T06:49:12.839Z] API call to /api/investments from ::1
+[2025-10-04T06:49:12.841Z] API call to /api/investments from ::1
+12:19:21 PM [vite] hmr update /src/components/TokenDebugger.jsx
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+12:19:56 PM [vite] hmr update /src/pages/Dashboard.jsx
+12:19:56 PM [vite] hmr update /src/components/UniversalPageEditor.jsx
+12:19:56 PM [vite] hmr update /src/components/ContentFieldEditor.jsx
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T06:49:56.826Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T06:50:10.825Z] API call to /api/content/home from ::1
+[2025-10-04T06:50:10.832Z] API call to /api/content/home from ::1
+[2025-10-04T06:50:12.988Z] API call to /api/investments from ::1
+[2025-10-04T06:50:12.993Z] API call to /api/investments from ::1
+[2025-10-04T06:50:24.000Z] API call to /api/investments from ::1
+[2025-10-04T06:50:27.442Z] API call to /api/investments from ::1
+[2025-10-04T06:50:35.211Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T06:50:50.674Z] API call to /api/content/home from ::1
+[2025-10-04T06:50:50.680Z] API call to /api/content/home from ::1
+[2025-10-04T06:50:59.094Z] API call to /api/investments from ::1
+[2025-10-04T06:50:59.096Z] API call to /api/content/home from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T06:51:31.192Z] API call to /api/content/home from ::1
+[2025-10-04T06:51:33.811Z] API call to /api/content/home from ::1
+[2025-10-04T06:51:33.812Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T06:51:44.337Z] API call to /api/investments from ::1
+[2025-10-04T06:51:44.341Z] API call to /api/investments from ::1
+[2025-10-04T06:51:51.650Z] API call to /api/content/about from ::1
+[2025-10-04T06:52:02.524Z] API call to /api/content/investment-classes from ::1
+[2025-10-04T06:52:07.464Z] API call to /api/content/portfolio from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T06:52:08.260Z] API call to /api/content/team from ::1
+[2025-10-04T06:52:08.831Z] API call to /api/content/apply from ::1
+[2025-10-04T06:52:10.078Z] API call to /api/content/contact from ::1
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+12:34:47 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+[2025-10-04T07:07:32.510Z] API call to /api/content/contact from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+12:37:49 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[2025-10-04T07:07:52.237Z] API call to /api/investments from ::1
+[2025-10-04T07:07:52.246Z] API call to /api/content/home from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T07:08:05.819Z] API call to /api/content/about from ::1
+[2025-10-04T07:08:09.217Z] API call to /api/content/portfolio from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:119:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:133:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:133:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:134:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:135:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+12:49:30 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+12:49:39 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+12:49:47 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+12:50:01 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+12:50:25 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+12:51:09 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:135:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:135:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+12:56:32 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:135:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+12:56:50 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+12:57:07 PM [vite] hmr update /src/pages/MediaLibrary.jsx
+1:02:50 PM [vite] hmr update /src/pages/TeamManager.jsx
+1:03:03 PM [vite] hmr update /src/pages/TeamManager.jsx
+1:03:22 PM [vite] hmr update /src/pages/TeamManager.jsx
+1:03:37 PM [vite] hmr update /src/pages/TeamManager.jsx
+1:04:01 PM [vite] hmr update /src/pages/TeamManager.jsx
+1:05:08 PM [vite] hmr update /src/pages/TeamManager.jsx
+1:08:45 PM [vite] hmr update /src/pages/PortfolioManager.jsx
+1:08:59 PM [vite] hmr update /src/pages/PortfolioManager.jsx
+1:10:00 PM [vite] hmr update /src/pages/PortfolioManager.jsx
+1:10:08 PM [vite] hmr update /src/pages/PortfolioManager.jsx
+1:10:32 PM [vite] hmr update /src/pages/PortfolioManager.jsx
+1:10:46 PM [vite] hmr update /src/pages/PortfolioManager.jsx
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node server.js`[39m
+./start-cms.sh: line 84: 90000 Hangup: 1               npm run dev  (wd: ~/projects/investment_portfolio/backend)
+./start-cms.sh: line 84: 90075 Hangup: 1               npm run dev  (wd: ~/projects/investment_portfolio/admin-panel)
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:135:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:135:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:135:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:137:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[2025-10-04T08:49:33.830Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+Error fetching branding settings: error: relation "branding_settings" does not exist
+    at /Users/logeshchandran/projects/investment_portfolio/backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///Users/logeshchandran/projects/investment_portfolio/backend/routes/branding.js:12:20 {
+  length: 117,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '264',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+✅ Connected to PostgreSQL database
+[2025-10-04T08:49:42.967Z] API call to /api/content/home from ::1
+[2025-10-04T08:49:42.974Z] API call to /api/content/home from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T08:49:45.430Z] API call to /api/branding from ::1
+[2025-10-04T08:49:45.432Z] API call to /api/branding/footer-links from ::1
+Error fetching branding settings: error: relation "branding_settings" does not exist
+    at /Users/logeshchandran/projects/investment_portfolio/backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///Users/logeshchandran/projects/investment_portfolio/backend/routes/branding.js:12:20 {
+  length: 117,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '264',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+Error fetching footer links: error: relation "footer_links" does not exist
+    at /Users/logeshchandran/projects/investment_portfolio/backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///Users/logeshchandran/projects/investment_portfolio/backend/routes/branding.js:53:20 {
+  length: 111,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '75',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[2025-10-04T08:49:45.437Z] API call to /api/branding from ::1
+[2025-10-04T08:49:45.438Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+Error fetching branding settings: error: relation "branding_settings" does not exist
+    at /Users/logeshchandran/projects/investment_portfolio/backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///Users/logeshchandran/projects/investment_portfolio/backend/routes/branding.js:12:20 {
+  length: 117,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '264',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+Error fetching footer links: error: relation "footer_links" does not exist
+    at /Users/logeshchandran/projects/investment_portfolio/backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///Users/logeshchandran/projects/investment_portfolio/backend/routes/branding.js:53:20 {
+  length: 111,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '75',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[2025-10-04T08:50:51.035Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+Error fetching branding settings: error: relation "branding_settings" does not exist
+    at /Users/logeshchandran/projects/investment_portfolio/backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///Users/logeshchandran/projects/investment_portfolio/backend/routes/branding.js:12:20 {
+  length: 117,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '264',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[2025-10-04T08:51:57.367Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+Error fetching branding settings: error: relation "branding_settings" does not exist
+    at /Users/logeshchandran/projects/investment_portfolio/backend/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///Users/logeshchandran/projects/investment_portfolio/backend/routes/branding.js:12:20 {
+  length: 117,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '265',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1384',
+  routine: 'parserOpenTable'
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:137:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:137:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:137:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:137:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:137:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:138:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T15:25:28.602Z] API call to /api/content/home from ::1
+[2025-10-04T15:25:28.605Z] API call to /api/content/home from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T15:27:05.076Z] API call to /api/content/home from ::1
+[2025-10-04T15:27:05.083Z] API call to /api/content/home from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T17:16:22.380Z] API call to /api/branding from ::1
+[2025-10-04T17:16:22.383Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T17:16:22.399Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T17:16:22.403Z] API call to /api/branding from ::1
+[2025-10-04T17:16:22.403Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T17:16:22.406Z] API call to /api/branding from ::1
+[2025-10-04T17:16:28.706Z] API call to /api/branding from ::1
+[2025-10-04T17:16:28.707Z] API call to /api/content/team from ::1
+[2025-10-04T17:16:28.712Z] API call to /api/branding from ::1
+[2025-10-04T17:16:28.712Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T17:16:28.713Z] API call to /api/branding from ::1
+[2025-10-04T17:16:28.714Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T17:16:28.715Z] API call to /api/branding from ::1
+[2025-10-04T17:17:00.771Z] API call to /api/branding from ::1
+[2025-10-04T17:17:00.772Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T17:17:00.785Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T17:17:00.786Z] API call to /api/branding from ::1
+[2025-10-04T17:17:00.787Z] API call to /api/branding from ::1
+[2025-10-04T17:17:00.787Z] API call to /api/branding from ::1
+[2025-10-04T17:17:59.189Z] API call to /api/content/home from ::1
+[2025-10-04T17:17:59.191Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T17:21:12.423Z] API call to /api/pages/home from ::1
+[2025-10-04T17:22:38.161Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T17:22:38.162Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T17:22:38.206Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T17:22:38.207Z] API call to /api/branding from ::1
+[2025-10-04T17:22:38.210Z] API call to /api/branding from ::1
+[2025-10-04T17:22:38.211Z] API call to /api/branding from ::1
+[2025-10-04T17:22:42.354Z] API call to /api/branding from ::1
+[2025-10-04T17:22:42.355Z] API call to /api/investments from ::1
+[2025-10-04T17:22:42.357Z] API call to /api/content/home from ::1
+[2025-10-04T17:22:42.357Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T17:22:42.360Z] API call to /api/branding from ::1
+[2025-10-04T17:22:42.361Z] API call to /api/branding from ::1
+[2025-10-04T17:22:42.362Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T17:22:42.367Z] API call to /api/branding/footer-links from ::1
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[2025-10-04T17:23:01.430Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T17:23:01.735Z] API call to /api/branding from ::1

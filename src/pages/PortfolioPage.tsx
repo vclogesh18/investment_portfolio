@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { usePortfolioCompanies, usePageContent } from '../hooks/useApi';
+import { usePortfolioMedia } from '../hooks/useMedia';
+import { LoadingState, ErrorState } from '../components/LoadingComponents';
+
+// Fallback image imports (for when media system is not available)
 import RedbackNetworks from '../images/Redback_Networks.svg';
 import Procera from '../images/Procera.png';
 import QuantAI from '../images/QuantAI-Digitial-logo.png';
@@ -10,6 +15,43 @@ import aquathermindia from '../images/aquathermindia.jpeg';
 import zerocode from '../images/zerocode.jpeg';
 
 const PortfolioPage = () => {
+  const { data: portfolioCompanies, loading, error } = usePortfolioCompanies();
+  const { data: pageContent, loading: pageLoading, error: pageError } = usePageContent('portfolio');
+  const { portfolioImageMap } = usePortfolioMedia();
+
+  // Fallback image mapping when media system is not available
+  const fallbackImageMap: { [key: string]: string } = {
+    'Redback Networks': RedbackNetworks,
+    'Procera': Procera,
+    'QuantAI Digital': QuantAI,
+    'GoPebble': gopebble,
+    'Biotricity': Biotricity,
+    'Telaverge': Telaverge,
+    'Aquatherm India': aquathermindia,
+    'ZeroCode': zerocode,
+  };
+
+  // Combine dynamic media with fallback images
+  const imageMap = { ...fallbackImageMap, ...portfolioImageMap };
+
+  if (loading || pageLoading) {
+    return (
+      <div className="pt-20">
+        <LoadingState>Loading portfolio content...</LoadingState>
+      </div>
+    );
+  }
+
+  if (error || pageError) {
+    return (
+      <div className="pt-20">
+        <ErrorState error={error || pageError || 'Unknown error'} />
+      </div>
+    );
+  }
+
+  // Sort companies by position
+  const sortedCompanies = [...portfolioCompanies].sort((a, b) => (a.position || 0) - (b.position || 0));
 
   return (
     <div className="pt-20">
@@ -17,18 +59,17 @@ const PortfolioPage = () => {
       <section 
         className="py-20 bg-gradient-to-br from-slate-800 to-slate-900 text-white"
         style={{
-          backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)), url('https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
+          backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)), url('${pageContent?.hero?.background_image_url || 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1920'}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Portfolio
+            {pageContent?.page?.hero_title || pageContent?.hero?.title || 'Our Portfolio'}
           </h1>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto">
-            A diverse collection of transformational companies across the most innovative 
-            sectors, representing the future of technology and business.
+            {pageContent?.page?.hero_description || pageContent?.hero?.description || 'A diverse collection of transformational companies across the most innovative sectors, representing the future of technology and business.'}
           </p>
         </div>
       </section>
@@ -47,31 +88,44 @@ const PortfolioPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-            <div className="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-amber-200 cursor-pointer">
-            <div><img src={RedbackNetworks} alt="BigCo Inc. logo"/></div>
-            </div>
-            <div className="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-amber-200 cursor-pointer">
-            <div><img src={Procera} alt="BigCo Inc. logo"/></div>
-            </div>
-            <div className="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-amber-200 cursor-pointer">
-            <div><img src={QuantAI} alt="BigCo Inc. logo"/></div>
-            </div>
-            <div className="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-amber-200 cursor-pointer">
-            <div><img src={gopebble} alt="BigCo Inc. logo"/></div>
-            </div>
-            <div className="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-amber-200 cursor-pointer">
-            <div><img src={Biotricity} alt="BigCo Inc. logo"/></div>
-            </div>
-            <div className="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-amber-200 cursor-pointer">
-            <div><img src={Telaverge} alt="BigCo Inc. logo"/></div>
-            </div>
-            <div className="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-amber-200 cursor-pointer">
-            <div><img src={aquathermindia} alt="BigCo Inc. logo"/></div>
-            </div>
-            <div className="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-amber-200 cursor-pointer">
-            <div><img src={zerocode} alt="BigCo Inc. logo"/></div>
-            </div>
-           
+            {sortedCompanies.map((company) => (
+              <div 
+                key={company.id}
+                data-testid="portfolio-company"
+                className="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-amber-200 cursor-pointer"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="mb-4 h-24 flex items-center justify-center">
+                    <img 
+                      src={company.logo ? `http://localhost:5001${company.logo}` : (imageMap[company.name] || '/placeholder-logo.png')} 
+                      alt={company.logo_alt || `${company.name} logo`}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-amber-600 transition-colors">
+                    {company.name}
+                  </h3>
+                  <p className="text-amber-600 font-medium text-sm mb-2" data-testid="company-sector">
+                    {company.sector}
+                  </p>
+                  {company.description && (
+                    <p className="text-slate-600 text-sm" data-testid="company-description">
+                      {company.description}
+                    </p>
+                  )}
+                  {company.website && (
+                    <a 
+                      href={company.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 text-amber-500 hover:text-amber-600 text-sm transition-colors"
+                    >
+                      Visit Website →
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

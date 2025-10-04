@@ -1,0 +1,330 @@
+{
+  "config": {
+    "configFile": "/Users/logeshchandran/projects/investment_portfolio/e2e-tests/playwright.config.ts",
+    "rootDir": "/Users/logeshchandran/projects/investment_portfolio/e2e-tests/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "/Users/logeshchandran/projects/investment_portfolio/e2e-tests/global-setup.ts",
+    "globalTeardown": "/Users/logeshchandran/projects/investment_portfolio/e2e-tests/global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/logeshchandran/projects/investment_portfolio/e2e-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/logeshchandran/projects/investment_portfolio/e2e-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/logeshchandran/projects/investment_portfolio/e2e-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/logeshchandran/projects/investment_portfolio/e2e-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/logeshchandran/projects/investment_portfolio/e2e-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/logeshchandran/projects/investment_portfolio/e2e-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "apply-page.spec.ts",
+      "file": "apply-page.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Apply Page Tests",
+          "file": "apply-page.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "apply page hero content syncs with database",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1333,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Apply page hero title: Apply for Funding\n"
+                        },
+                        {
+                          "text": "Apply page hero description: Are you building a transformational company? We're looking for exceptional entrepreneurs with innovative solutions that have the potential to reshape industries.\n"
+                        },
+                        {
+                          "text": "✅ Apply page hero content is synced with database\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-04T06:38:53.713Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6c7a9ca2212c72528ece-e88db3476fbf59fcceac",
+              "file": "apply-page.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "contact-page.spec.ts",
+      "file": "contact-page.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Contact Page Tests",
+          "file": "contact-page.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "contact page loads and displays content",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4467,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Page title: Seven Boson Group Ltd\n"
+                        },
+                        {
+                          "text": "Hero text: Get in Touch With Us\n"
+                        },
+                        {
+                          "text": "Is loading: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Has error: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Form elements found:\n"
+                        },
+                        {
+                          "text": "- Name input: \u001b[33m1\u001b[39m\n"
+                        },
+                        {
+                          "text": "- Email input: \u001b[33m1\u001b[39m\n"
+                        },
+                        {
+                          "text": "- Subject select: \u001b[33m1\u001b[39m\n"
+                        },
+                        {
+                          "text": "- Message textarea: \u001b[33m1\u001b[39m\n"
+                        },
+                        {
+                          "text": "- Submit button: \u001b[33m1\u001b[39m\n"
+                        },
+                        {
+                          "text": "Office section found: \u001b[33m1\u001b[39m\n"
+                        },
+                        {
+                          "text": "Office cards found: \u001b[33m3\u001b[39m\n"
+                        },
+                        {
+                          "text": "New York office: \u001b[33m2\u001b[39m\n"
+                        },
+                        {
+                          "text": "London office: \u001b[33m3\u001b[39m\n"
+                        },
+                        {
+                          "text": "Singapore office: \u001b[33m3\u001b[39m\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-04T06:38:55.138Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0d6f4f574701591bc367-5a7e5e1873a50a48ba0c",
+              "file": "contact-page.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "content-consistency.spec.ts",
+      "file": "content-consistency.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Content Consistency Tests - Website vs Admin Panel",
+          "file": "content-consistency.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Team Page Content Consistency",
+              "file": "content-consistency.spec.ts",
+              "line": 11,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "Team page hero content matches database",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1289,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ Team page hero content verification passed\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-10-04T06:38:59.613Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "a01de6f235bee89485f6-2434f22ca711e23b0096",
+                  "file": "content-consistency.spec.ts",
+                  "line": 13,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-10-04T06:38:52.929Z",
+    "duration": 8007.229,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

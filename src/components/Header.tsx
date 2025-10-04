@@ -1,12 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { useBrandMedia } from '../hooks/useMedia';
+import { useBranding } from '../hooks/useBranding';
 import sblogo from '../images/SEVEN-BOSON-LOGO.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { brandImageMap } = useBrandMedia();
+  const { branding } = useBranding();
+
+  // Get logo from dynamic media or fallback to static import
+  const logoSrc = branding.logo_alt_text?.media_path 
+    ? `http://localhost:5001${branding.logo_alt_text.media_path}` 
+    : brandImageMap['SEVEN-BOSON-LOGO'] || sblogo;
+
+  // Get company name from branding settings
+  const companyName = branding.company_name?.value || 'Seven Boson Group';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +35,7 @@ const Header = () => {
     { name: 'Investment Classes', href: '/investment-classes' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Team', href: '/team' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Apply', href: '/apply' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -39,7 +52,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           
           <Link to="/" className="flex items-center">
-          <img src={sblogo} alt="BigCo Inc. logo" style={{ width: '75px' }}/>
+          <img src={logoSrc} alt="Seven Boson Group logo" style={{ width: '75px' }}/>
             <span className={`text-2xl font-bold transition-colors ${
               isScrolled ? 'text-slate-800' : location.pathname === '/' ? 'text-white' : 'text-slate-800'
             }`}>

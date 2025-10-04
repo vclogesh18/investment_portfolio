@@ -1,0 +1,473 @@
+import express from 'express';
+import pool from '../config/database.js';
+import { authenticateToken, requireAdmin, optionalAuth } from '../middleware/auth.js';
+
+const router = express.Router();
+
+// GET /api/homepage - Get homepage content (public)
+router.get('/', optionalAuth, async (req, res) => {
+  try {
+    console.log(`[${new Date().toISOString()}] API call to /api/homepage from ${req.ip}`);
+    
+    // Get hero section
+    const heroResult = await pool.query(`
+      SELECT * FROM hero_sections 
+      WHERE page_slug = 'home' AND is_active = true
+      ORDER BY position, id
+      LIMIT 1
+    `);
+
+    // Get page sections
+    const sectionsResult = await pool.query(`
+      SELECT * FROM page_sections 
+      WHERE page_slug = 'home' AND is_active = true
+      ORDER BY position, id
+    `);
+
+    // Get quotes
+    const quotesResult = await pool.query(`
+      SELECT * FROM quotes 
+      WHERE page_slug = 'home' AND is_active = true
+      ORDER BY section_position, id
+    `);
+
+    // Get CTA sections
+    const ctaResult = await pool.query(`
+      SELECT * FROM cta_sections 
+      WHERE page_slug = 'home' AND is_active = true
+      ORDER BY position, id
+    `);
+
+    const homepage = {
+      hero: heroResult.rows[0] || null,
+      sections: sectionsResult.rows,
+      quotes: quotesResult.rows,
+      cta: ctaResult.rows
+    };
+
+    res.json(homepage);
+  } catch (error) {
+    console.error('Error fetching homepage content:', error);
+    res.status(500).json({ error: 'Failed to fetch homepage content' });
+  }
+});
+
+// POST /api/homepage/hero - Create/Update hero section (admin only)
+router.post('/hero', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const {
+      title,
+      subtitle,
+      description,
+      background_image_url,
+      primary_cta_text,
+      primary_cta_link,
+      secondary_cta_text,
+      secondary_cta_link
+    } = req.body;
+
+    const query = `
+      INSERT INTO hero_sections (
+        page_slug, title, subtitle, description, background_image_url,
+        primary_cta_text, primary_cta_link, secondary_cta_text, secondary_cta_link,
+        position
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+      RETURNING *
+    `;
+
+    const values = ['home', title, subtitle, description, background_image_url,
+                   primary_cta_text, primary_cta_link, secondary_cta_text, secondary_cta_link, 0];
+    
+    const result = await pool.query(query, values);
+
+    res.status(201).json({
+      success: true,
+      hero: result.rows[0]
+    });
+  } catch (error) {
+    console.error('Error creating hero section:', error);
+    res.status(500).json({ error: 'Failed to create hero section' });
+  }
+});
+
+// PUT /api/homepage/hero/:id - Update hero section (admin only)
+router.put('/hero/:id', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const {
+      title,
+      subtitle,
+      description,
+      background_image_url,
+      primary_cta_text,
+      primary_cta_link,
+      secondary_cta_text,
+      secondary_cta_link,
+      is_active
+    } = req.body;
+
+    const query = `
+      UPDATE hero_sections 
+      SET 
+        title = COALESCE($1, title),
+        subtitle = COALESCE($2, subtitle),
+        description = COALESCE($3, description),
+        background_image_url = COALESCE($4, background_image_url),
+        primary_cta_text = COALESCE($5, primary_cta_text),
+        primary_cta_link = COALESCE($6, primary_cta_link),
+        secondary_cta_text = COALESCE($7, secondary_cta_text),
+        secondary_cta_link = COALESCE($8, secondary_cta_link),
+        is_active = COALESCE($9, is_active),
+        updated_at = NOW()
+      WHERE id = $10
+      RETURNING *
+    `;
+
+    const values = [title, subtitle, description, background_image_url,
+                   primary_cta_text, primary_cta_link, secondary_cta_text, 
+                   secondary_cta_link, is_active, id];
+    
+    const result = await pool.query(query, values);
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Hero section not found' });
+    }
+
+    res.json({
+      success: true,
+      hero: result.rows[0]
+    });
+  } catch (error) {
+    console.error('Error updating hero section:', error);
+    res.status(500).json({ error: 'Failed to update hero section' });
+  }
+});
+
+// POST /api/homepage/sections - Create page section (admin only)
+router.post('/sections', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const {
+      section_type,
+      title,
+      subtitle,
+      description,
+      content,
+      background_color,
+      text_color,
+      position
+    } = req.body;
+
+    const query = `
+      INSERT INTO page_sections (
+        page_slug, section_type, title, subtitle, description, content,
+        background_color, text_color, position
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+      RETURNING *
+    `;
+
+    const values = ['home', section_type, title, subtitle, description, 
+                   content, background_color, text_color, position || 0];
+    
+    const result = await pool.query(query, values);
+
+    res.status(201).json({
+      success: true,
+      section: result.rows[0]
+    });
+  } catch (error) {
+    console.error('Error creating page section:', error);
+    res.status(500).json({ error: 'Failed to create page section' });
+  }
+});
+
+// PUT /api/homepage/sections/:id - Update page section (admin only)
+router.put('/sections/:id', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const {
+      section_type,
+      title,
+      subtitle,
+      description,
+      content,
+      background_color,
+      text_color,
+      position,
+      is_active
+    } = req.body;
+
+    const query = `
+      UPDATE page_sections 
+      SET 
+        section_type = COALESCE($1, section_type),
+        title = COALESCE($2, title),
+        subtitle = COALESCE($3, subtitle),
+        description = COALESCE($4, description),
+        content = COALESCE($5, content),
+        background_color = COALESCE($6, background_color),
+        text_color = COALESCE($7, text_color),
+        position = COALESCE($8, position),
+        is_active = COALESCE($9, is_active),
+        updated_at = NOW()
+      WHERE id = $10
+      RETURNING *
+    `;
+
+    const values = [section_type, title, subtitle, description, content,
+                   background_color, text_color, position, is_active, id];
+    
+    const result = await pool.query(query, values);
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Page section not found' });
+    }
+
+    res.json({
+      success: true,
+      section: result.rows[0]
+    });
+  } catch (error) {
+    console.error('Error updating page section:', error);
+    res.status(500).json({ error: 'Failed to update page section' });
+  }
+});
+
+// POST /api/homepage/quotes - Create quote (admin only)
+router.post('/quotes', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const {
+      quote_text,
+      author,
+      author_title,
+      author_image_url,
+      section_position
+    } = req.body;
+
+    if (!quote_text) {
+      return res.status(400).json({ error: 'Quote text is required' });
+    }
+
+    const query = `
+      INSERT INTO quotes (
+        quote_text, author, author_title, author_image_url, 
+        page_slug, section_position
+      ) VALUES ($1, $2, $3, $4, $5, $6)
+      RETURNING *
+    `;
+
+    const values = [quote_text, author, author_title, author_image_url, 
+                   'home', section_position || 0];
+    
+    const result = await pool.query(query, values);
+
+    res.status(201).json({
+      success: true,
+      quote: result.rows[0]
+    });
+  } catch (error) {
+    console.error('Error creating quote:', error);
+    res.status(500).json({ error: 'Failed to create quote' });
+  }
+});
+
+// PUT /api/homepage/quotes/:id - Update quote (admin only)
+router.put('/quotes/:id', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const {
+      quote_text,
+      author,
+      author_title,
+      author_image_url,
+      section_position,
+      is_active
+    } = req.body;
+
+    const query = `
+      UPDATE quotes 
+      SET 
+        quote_text = COALESCE($1, quote_text),
+        author = COALESCE($2, author),
+        author_title = COALESCE($3, author_title),
+        author_image_url = COALESCE($4, author_image_url),
+        section_position = COALESCE($5, section_position),
+        is_active = COALESCE($6, is_active),
+        updated_at = NOW()
+      WHERE id = $7
+      RETURNING *
+    `;
+
+    const values = [quote_text, author, author_title, author_image_url,
+                   section_position, is_active, id];
+    
+    const result = await pool.query(query, values);
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Quote not found' });
+    }
+
+    res.json({
+      success: true,
+      quote: result.rows[0]
+    });
+  } catch (error) {
+    console.error('Error updating quote:', error);
+    res.status(500).json({ error: 'Failed to update quote' });
+  }
+});
+
+// DELETE routes for cleaning up content
+router.delete('/hero/:id', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const result = await pool.query('DELETE FROM hero_sections WHERE id = $1 RETURNING *', [id]);
+    
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Hero section not found' });
+    }
+
+    res.json({ success: true, message: 'Hero section deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting hero section:', error);
+    res.status(500).json({ error: 'Failed to delete hero section' });
+  }
+});
+
+router.delete('/sections/:id', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const result = await pool.query('DELETE FROM page_sections WHERE id = $1 RETURNING *', [id]);
+    
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Page section not found' });
+    }
+
+    res.json({ success: true, message: 'Page section deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting page section:', error);
+    res.status(500).json({ error: 'Failed to delete page section' });
+  }
+});
+
+router.delete('/quotes/:id', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const result = await pool.query('DELETE FROM quotes WHERE id = $1 RETURNING *', [id]);
+    
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Quote not found' });
+    }
+
+    res.json({ success: true, message: 'Quote deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting quote:', error);
+    res.status(500).json({ error: 'Failed to delete quote' });
+  }
+});
+
+// POST /api/homepage/cta - Create CTA section (admin only)
+router.post('/cta', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const {
+      title,
+      description,
+      primary_button_text,
+      primary_button_link,
+      secondary_button_text,
+      secondary_button_link,
+      background_color,
+      text_color,
+      position
+    } = req.body;
+
+    const query = `
+      INSERT INTO cta_sections (
+        page_slug, title, description, primary_button_text, primary_button_link,
+        secondary_button_text, secondary_button_link, background_color, text_color, position
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+      RETURNING *
+    `;
+
+    const values = [
+      'home', title, description, primary_button_text, primary_button_link,
+      secondary_button_text, secondary_button_link, background_color, text_color, position || 0
+    ];
+    
+    const result = await pool.query(query, values);
+
+    res.status(201).json({
+      success: true,
+      cta: result.rows[0]
+    });
+  } catch (error) {
+    console.error('Error creating CTA section:', error);
+    res.status(500).json({ error: 'Failed to create CTA section' });
+  }
+});
+
+// PUT /api/homepage/cta/:id - Update CTA section (admin only)
+router.put('/cta/:id', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const {
+      title,
+      description,
+      primary_button_text,
+      primary_button_link,
+      secondary_button_text,
+      secondary_button_link,
+      background_color,
+      text_color,
+      position,
+      is_active
+    } = req.body;
+
+    const query = `
+      UPDATE cta_sections SET
+        title = $1, description = $2, primary_button_text = $3, primary_button_link = $4,
+        secondary_button_text = $5, secondary_button_link = $6, background_color = $7,
+        text_color = $8, position = $9, is_active = $10, updated_at = NOW()
+      WHERE id = $11 AND page_slug = 'home'
+      RETURNING *
+    `;
+
+    const values = [
+      title, description, primary_button_text, primary_button_link,
+      secondary_button_text, secondary_button_link, background_color,
+      text_color, position, is_active, id
+    ];
+    
+    const result = await pool.query(query, values);
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'CTA section not found' });
+    }
+
+    res.json({
+      success: true,
+      cta: result.rows[0]
+    });
+  } catch (error) {
+    console.error('Error updating CTA section:', error);
+    res.status(500).json({ error: 'Failed to update CTA section' });
+  }
+});
+
+// DELETE /api/homepage/cta/:id - Delete CTA section (admin only)
+router.delete('/cta/:id', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const result = await pool.query('DELETE FROM cta_sections WHERE id = $1 RETURNING *', [id]);
+    
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'CTA section not found' });
+    }
+
+    res.json({ success: true, message: 'CTA section deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting CTA section:', error);
+    res.status(500).json({ error: 'Failed to delete CTA section' });
+  }
+});
+
+export default router;

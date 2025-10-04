@@ -9,6 +9,8 @@ import PortfolioPage from './pages/PortfolioPage';
 import TeamPage from './pages/TeamPage';
 import ApplyPage from './pages/ApplyPage';
 import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path="/investment-classes" element={<InvestmentClassesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/team" element={<TeamPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/apply" element={<ApplyPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>

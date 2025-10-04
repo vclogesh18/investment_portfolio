@@ -1,0 +1,42 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="8.007229">
+<testsuite name="apply-page.spec.ts" timestamp="2025-10-04T06:38:53.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.333" errors="0">
+<testcase name="Apply Page Tests › apply page hero content syncs with database" classname="apply-page.spec.ts" time="1.333">
+<system-out>
+<![CDATA[Apply page hero title: Apply for Funding
+Apply page hero description: Are you building a transformational company? We're looking for exceptional entrepreneurs with innovative solutions that have the potential to reshape industries.
+✅ Apply page hero content is synced with database
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="contact-page.spec.ts" timestamp="2025-10-04T06:38:53.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.467" errors="0">
+<testcase name="Contact Page Tests › contact page loads and displays content" classname="contact-page.spec.ts" time="4.467">
+<system-out>
+<![CDATA[Page title: Seven Boson Group Ltd
+Hero text: Get in Touch With Us
+Is loading: [33mfalse[39m
+Has error: [33mfalse[39m
+Form elements found:
+- Name input: [33m1[39m
+- Email input: [33m1[39m
+- Subject select: [33m1[39m
+- Message textarea: [33m1[39m
+- Submit button: [33m1[39m
+Office section found: [33m1[39m
+Office cards found: [33m3[39m
+New York office: [33m2[39m
+London office: [33m3[39m
+Singapore office: [33m3[39m
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="content-consistency.spec.ts" timestamp="2025-10-04T06:38:53.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.289" errors="0">
+<testcase name="Content Consistency Tests - Website vs Admin Panel › Team Page Content Consistency › Team page hero content matches database" classname="content-consistency.spec.ts" time="1.289">
+<system-out>
+<![CDATA[✅ Team page hero content verification passed
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

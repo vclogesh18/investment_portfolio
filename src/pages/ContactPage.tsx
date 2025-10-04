@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, Linkedin } from 'lucide-react';
+import { usePageContent } from '../hooks/usePageContent';
+import { LoadingState, ErrorState } from '../components/LoadingComponents';
 
 const ContactPage = () => {
+  const { loading, error, hero, sections, features } = usePageContent('contact');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -9,20 +12,53 @@ const ContactPage = () => {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Contact form submitted:', formData);
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const officeLocations = [
+  // Loading state
+  if (loading) {
+    return (
+      <div className="pt-20">
+        <LoadingState>Loading contact page...</LoadingState>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="pt-20">
+        <ErrorState error={error} />
+      </div>
+    );
+  }
+
+  // Get contact info from API
+  const contactInfoSection = sections.find((section: any) => section.section_name === 'contact_info');
+  const formConfigSection = features?.find((feature: any) => feature.section_name === 'contact_form_config');
+  const officeLocationsSection = features?.find((feature: any) => feature.section_name === 'office_locations');
+
+  // Fallback form options if API doesn't have data yet
+  const fallbackFormOptions = [
+    { value: "investment-inquiry", label: "Investment Inquiry" },
+    { value: "funding-application", label: "Funding Application" },
+    { value: "partnership", label: "Partnership Opportunities" },
+    { value: "media", label: "Media Inquiry" },
+    { value: "general", label: "General Question" }
+  ];
+
+  // Fallback office locations if API doesn't have data yet
+  const fallbackOfficeLocations = [
     {
       city: 'New York',
       address: '350 Fifth Avenue, Suite 7810, New York, NY 10118',
@@ -43,24 +79,26 @@ const ContactPage = () => {
     }
   ];
 
+  const formOptions = formConfigSection?.items || fallbackFormOptions;
+  const officeLocations = officeLocationsSection?.items || fallbackOfficeLocations;
+
   return (
     <div className="pt-20">
       {/* Hero Section */}
       <section 
         className="py-20 bg-gradient-to-br from-slate-800 to-slate-900 text-white"
         style={{
-          backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)), url('https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
+          backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)), url('${hero?.background_image_url || 'https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1920'}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Get in Touch With Us
+            {hero?.title || 'Get in Touch With Us'}
           </h1>
           <p className="text-xl text-slate-300">
-            Ready to explore investment opportunities or discuss partnership possibilities? 
-            Our team is here to help you navigate your next strategic move.
+            {hero?.description || 'Ready to explore investment opportunities or discuss partnership possibilities? Our team is here to help you navigate your next strategic move.'}
           </p>
         </div>
       </section>
@@ -122,11 +160,11 @@ const ContactPage = () => {
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                     >
                       <option value="">Select a subject</option>
-                      <option value="investment-inquiry">Investment Inquiry</option>
-                      <option value="funding-application">Funding Application</option>
-                      <option value="partnership">Partnership Opportunities</option>
-                      <option value="media">Media Inquiry</option>
-                      <option value="general">General Question</option>
+                      {formOptions.map((option: any) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
@@ -230,7 +268,7 @@ const ContactPage = () => {
       </section>
 
       {/* Office Locations */}
-      {/* <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-slate-800 mb-4">
@@ -242,7 +280,7 @@ const ContactPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {officeLocations.map((office, index) => (
+            {officeLocations.map((office: any, index: number) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-slate-800 mb-4">{office.city}</h3>
                 <div className="space-y-3 text-sm">
@@ -263,7 +301,7 @@ const ContactPage = () => {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };
