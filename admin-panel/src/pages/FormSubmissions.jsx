@@ -25,7 +25,12 @@ import {
   FormControl,
   InputLabel,
   Select,
-  MenuItem
+  MenuItem,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Divider
 } from '@mui/material';
 import {
   ArrowBack as ArrowBackIcon,
@@ -43,6 +48,10 @@ const FormSubmissions = () => {
   const [submissions, setSubmissions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [viewDialog, setViewDialog] = useState({
+    open: false,
+    submission: null
+  });
   const [filters, setFilters] = useState({
     status: 'all',
     search: '',
@@ -128,6 +137,20 @@ const FormSubmissions = () => {
       case 'archived': return 'default';
       default: return 'default';
     }
+  };
+
+  const handleViewSubmission = (submission) => {
+    setViewDialog({
+      open: true,
+      submission: submission
+    });
+  };
+
+  const handleCloseViewDialog = () => {
+    setViewDialog({
+      open: false,
+      submission: null
+    });
   };
 
   const formatFieldValue = (field, value) => {
@@ -332,10 +355,10 @@ const FormSubmissions = () => {
                     <TableCell>
                       <Stack spacing={0.5}>
                         <Typography variant="body2">
-                          {new Date(submission.created_at).toLocaleDateString()}
+                          {new Date(submission.submitted_at).toLocaleDateString()}
                         </Typography>
                         <Typography variant="caption" color="text.secondary">
-                          {new Date(submission.created_at).toLocaleTimeString()}
+                          {new Date(submission.submitted_at).toLocaleTimeString()}
                         </Typography>
                       </Stack>
                     </TableCell>
@@ -353,6 +376,7 @@ const FormSubmissions = () => {
                         <IconButton
                           size="small"
                           color="primary"
+                          onClick={() => handleViewSubmission(submission)}
                         >
                           <VisibilityIcon />
                         </IconButton>
@@ -382,6 +406,110 @@ const FormSubmissions = () => {
           }}
         />
       </Paper>
+
+      {/* View Submission Dialog */}
+      <Dialog 
+        open={viewDialog.open} 
+        onClose={handleCloseViewDialog}
+        maxWidth="md"
+        fullWidth
+      >
+        <DialogTitle>
+          <Box display="flex" justifyContent="space-between" alignItems="center">
+            <Typography variant="h6">
+              Submission Details #{viewDialog.submission?.id}
+            </Typography>
+            <Chip 
+              label={viewDialog.submission?.status || 'new'} 
+              color={getStatusColor(viewDialog.submission?.status)}
+              size="small"
+              sx={{ textTransform: 'capitalize' }}
+            />
+          </Box>
+        </DialogTitle>
+        
+        <DialogContent dividers>
+          {viewDialog.submission && (
+            <Stack spacing={3}>
+              {/* Submission Meta */}
+              <Paper elevation={1} sx={{ p: 2, bgcolor: 'grey.50' }}>
+                <Grid container spacing={2}>
+                  <Grid item xs={6}>
+                    <Typography variant="body2" color="text.secondary">
+                      Submitted At
+                    </Typography>
+                    <Typography variant="body1">
+                      {new Date(viewDialog.submission.submitted_at).toLocaleString()}
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <Typography variant="body2" color="text.secondary">
+                      IP Address
+                    </Typography>
+                    <Typography variant="body1" fontFamily="monospace">
+                      {viewDialog.submission.ip_address}
+                    </Typography>
+                  </Grid>
+                  {viewDialog.submission.user_agent && (
+                    <Grid item xs={12}>
+                      <Typography variant="body2" color="text.secondary">
+                        User Agent
+                      </Typography>
+                      <Typography variant="body2" sx={{ wordBreak: 'break-all' }}>
+                        {viewDialog.submission.user_agent}
+                      </Typography>
+                    </Grid>
+                  )}
+                </Grid>
+              </Paper>
+
+              {/* Form Data */}
+              <Typography variant="h6" gutterBottom>
+                Form Data
+              </Typography>
+              
+              {form?.fields?.map(field => {
+                const value = viewDialog.submission.data[field.name];
+                if (!value && value !== 0) return null;
+                
+                return (
+                  <Box key={field.id}>
+                    <Typography variant="body2" color="text.secondary" gutterBottom>
+                      {field.label}
+                    </Typography>
+                    <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.50', mb: 2 }}>
+                      <Typography variant="body1">
+                        {field.type === 'checkbox' && Array.isArray(value) 
+                          ? value.join(', ')
+                          : field.type === 'file' 
+                            ? (value.name || value)
+                            : value
+                        }
+                      </Typography>
+                    </Paper>
+                  </Box>
+                );
+              })}
+            </Stack>
+          )}
+        </DialogContent>
+        
+        <DialogActions>
+          <Button onClick={handleCloseViewDialog}>
+            Close
+          </Button>
+          <Button 
+            variant="contained" 
+            color="primary"
+            onClick={() => {
+              // TODO: Mark as read functionality
+              handleCloseViewDialog();
+            }}
+          >
+            Mark as Read
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Container>
   );
 };
