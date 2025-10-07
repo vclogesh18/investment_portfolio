@@ -1354,3 +1354,9 @@ Node.js v20.19.5
 [2025-10-07T17:21:42.397Z] API call to /api/investments from ::1
 ✅ Connected to PostgreSQL database
 ✅ Connected to PostgreSQL database
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+✅ Connected to PostgreSQL database
