@@ -1360,3 +1360,40 @@ Node.js v20.19.5
 🌍 Environment: development
 📊 Health check: http://localhost:5001/api/health
 ✅ Connected to PostgreSQL database
+[2025-10-07T17:23:15.620Z] API call to /api/branding from ::1
+[2025-10-07T17:23:15.642Z] API call to /api/content/apply from ::1
+[2025-10-07T17:23:15.647Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T17:23:15.702Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:23:15.702Z] API call to /api/branding from ::1
+[2025-10-07T17:23:15.704Z] API call to /api/branding from ::1
+[2025-10-07T17:23:15.706Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+[2025-10-07T17:23:15.735Z] API call to /api/investments from ::1
+[2025-10-07T17:23:15.739Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T19:58:16.393Z] API call to /api/branding from ::1
+[2025-10-07T19:58:16.422Z] API call to /api/content/contact from ::1
+[2025-10-07T19:58:16.425Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T19:58:16.486Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T19:58:16.507Z] API call to /api/branding from ::1
+[2025-10-07T19:58:16.510Z] API call to /api/branding from ::1
+[2025-10-07T19:58:16.511Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
