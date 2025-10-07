@@ -1,29 +1,10 @@
-import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { usePageContent } from '../hooks/usePageContent';
 import { LoadingState, ErrorState } from '../components/LoadingComponents';
+import DynamicForm from '../components/DynamicForm';
 
 const ContactPage = () => {
   const { loading, error, hero, features } = usePageContent('contact');
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Contact form submitted:', formData);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   // Loading state
   if (loading) {
@@ -44,17 +25,7 @@ const ContactPage = () => {
   }
 
   // Get contact info from API
-  const formConfigSection = features?.find((feature: any) => feature.section_name === 'contact_form_config');
   const officeLocationsSection = features?.find((feature: any) => feature.section_name === 'office_locations');
-
-  // Fallback form options if API doesn't have data yet
-  const fallbackFormOptions = [
-    { value: "investment-inquiry", label: "Investment Inquiry" },
-    { value: "funding-application", label: "Funding Application" },
-    { value: "partnership", label: "Partnership Opportunities" },
-    { value: "media", label: "Media Inquiry" },
-    { value: "general", label: "General Question" }
-  ];
 
   // Fallback office locations if API doesn't have data yet
   const fallbackOfficeLocations = [
@@ -78,7 +49,6 @@ const ContactPage = () => {
     }
   ];
 
-  const formOptions = formConfigSection?.items || fallbackFormOptions;
   const officeLocations = officeLocationsSection?.items || fallbackOfficeLocations;
 
   return (
@@ -113,84 +83,15 @@ const ContactPage = () => {
                   Send Us a Message
                 </h2>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
-                      placeholder="Enter your email address"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                      Subject *
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      required
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
-                    >
-                      <option value="">Select a subject</option>
-                      {formOptions.map((option: any) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all resize-none"
-                      placeholder="Tell us how we can help you..."
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center group"
-                  >
-                    Send Message
-                    <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                  </button>
-                </form>
+                <DynamicForm 
+                  slug="contact"
+                  onSubmitSuccess={(data) => {
+                    console.log('Contact form submitted successfully:', data);
+                  }}
+                  onSubmitError={(error) => {
+                    console.error('Contact form submission error:', error);
+                  }}
+                />
               </div>
             </div>
 

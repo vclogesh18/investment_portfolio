@@ -19,6 +19,8 @@ import pageContentRoutes from './routes/pageContent.js';
 import homepageRoutes from './routes/homepage.js';
 import brandingRoutes from './routes/branding.js';
 import blogRoutes from './routes/blog.js';
+import formsRoutes from './routes/forms.js';
+import formFieldsRoutes from './routes/formFields.js';
 
 // ES module setup
 const __filename = fileURLToPath(import.meta.url);
@@ -112,6 +114,8 @@ app.use('/api/content', pageContentRoutes);
 app.use('/api/homepage', homepageRoutes);
 app.use('/api/branding', brandingRoutes);
 app.use('/api/blog', blogRoutes);
+app.use('/api/forms', formsRoutes);
+app.use('/api/form-fields', formFieldsRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

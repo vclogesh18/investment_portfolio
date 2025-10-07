@@ -11,6 +11,9 @@ import BlogManager from './pages/BlogManager';
 import MediaLibrary from './pages/MediaLibrary';
 import PagesManager from './pages/PagesManager';
 import BrandingManager from './pages/BrandingManager';
+import FormsManager from './pages/FormsManager';
+import FormBuilder from './pages/FormBuilder';
+import FormSubmissions from './pages/FormSubmissions';
 
 // Protected route wrapper
 const ProtectedRoute = ({ children }) => {
@@ -45,6 +48,10 @@ function App() {
           <Route path="media" element={<MediaLibrary />} />
           <Route path="pages" element={<PagesManager />} />
           <Route path="branding" element={<BrandingManager />} />
+          <Route path="forms" element={<FormsManager />} />
+          <Route path="forms/new" element={<FormBuilder />} />
+          <Route path="forms/:id/edit" element={<FormBuilder />} />
+          <Route path="forms/:formId/submissions" element={<FormSubmissions />} />
         </Route>
       </Routes>
     </AuthProvider>

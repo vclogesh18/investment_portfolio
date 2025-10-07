@@ -26,6 +26,7 @@ import {
   Logout,
   Palette,
   Article,
+  Assignment,
 } from '@mui/icons-material';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -39,6 +40,7 @@ const menuItems = [
   { text: 'Blog', icon: <Article />, path: '/blog' },
   { text: 'Media Library', icon: <Photo />, path: '/media' },
   { text: 'Pages', icon: <Pages />, path: '/pages' },
+  { text: 'Forms', icon: <Assignment />, path: '/forms' },
   { text: 'Branding', icon: <Palette />, path: '/branding' },
 ];
 

@@ -1118,3 +1118,239 @@ Node.js v20.19.5
 [2025-10-04T18:20:15.149Z] API call to /api/branding from ::1
 [2025-10-04T18:20:15.151Z] API call to /api/branding/footer-links from ::1
 ✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-04T19:09:22.977Z] API call to /api/investments from ::1
+[2025-10-04T19:09:22.981Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+[2025-10-04T19:09:26.085Z] API call to /api/investments from ::1
+[2025-10-04T19:09:26.087Z] API call to /api/investments from ::1
+[2025-10-04T19:09:28.468Z] API call to /api/content/home from ::1
+[2025-10-04T19:09:28.471Z] API call to /api/content/home from ::1
+[2025-10-04T19:09:29.484Z] API call to /api/branding from ::1
+[2025-10-04T19:09:29.484Z] API call to /api/branding/footer-links from ::1
+[2025-10-04T19:09:29.486Z] API call to /api/branding from ::1
+[2025-10-04T19:09:29.486Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-06T16:26:48.201Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+[2025-10-06T16:26:48.205Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-06T16:35:10.223Z] API call to /api/investments from ::1
+[2025-10-06T16:35:10.225Z] API call to /api/investments from ::1
+[2025-10-06T16:35:14.386Z] API call to /api/investments from ::1
+[2025-10-06T16:35:14.388Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-06T17:47:52.452Z] API call to /api/investments from ::1
+[2025-10-06T17:47:52.454Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T04:32:06.747Z] API call to /api/investments from ::1
+[2025-10-07T04:32:06.754Z] API call to /api/investments from ::1
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:143:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/Users/logeshchandran/projects/investment_portfolio/backend/node_modules/express/lib/application.js:635:24)
+    at file:///Users/logeshchandran/projects/investment_portfolio/backend/server.js:143:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 5001
+}
+
+Node.js v20.19.5
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+✅ Connected to PostgreSQL database
+[2025-10-07T16:56:15.119Z] API call to /api/branding from ::1
+[2025-10-07T16:56:15.120Z] API call to /api/content/contact from ::1
+[2025-10-07T16:56:15.120Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T16:56:15.127Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T16:56:15.127Z] API call to /api/branding from ::1
+[2025-10-07T16:56:15.130Z] API call to /api/branding from ::1
+[2025-10-07T16:56:15.131Z] API call to /api/branding from ::1
+[2025-10-07T17:00:24.518Z] API call to /api/investments from ::1
+[2025-10-07T17:00:24.519Z] API call to /api/branding from ::1
+[2025-10-07T17:00:24.521Z] API call to /api/content/home from ::1
+[2025-10-07T17:00:24.522Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T17:00:24.534Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T17:00:24.537Z] API call to /api/branding from ::1
+[2025-10-07T17:00:24.539Z] API call to /api/branding from ::1
+[2025-10-07T17:00:24.540Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:00:26.612Z] API call to /api/content/contact from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T17:04:55.368Z] API call to /api/investments from ::1
+[2025-10-07T17:04:55.372Z] API call to /api/investments from ::1
+[2025-10-07T17:08:38.016Z] API call to /api/branding from ::1
+[2025-10-07T17:08:38.018Z] API call to /api/content/contact from ::1
+[2025-10-07T17:08:38.019Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T17:08:38.040Z] API call to /api/branding from ::1
+[2025-10-07T17:08:38.040Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:08:38.044Z] API call to /api/branding from ::1
+[2025-10-07T17:08:38.046Z] API call to /api/branding from ::1
+[2025-10-07T17:14:18.497Z] API call to /api/branding from ::1
+[2025-10-07T17:14:18.499Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:14:18.501Z] API call to /api/content/contact from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T17:14:18.551Z] API call to /api/branding from ::1
+[2025-10-07T17:14:18.553Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+[2025-10-07T17:14:18.571Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+[2025-10-07T17:14:18.586Z] API call to /api/branding from ::1
+[2025-10-07T17:14:26.439Z] API call to /api/content/apply from ::1
+[2025-10-07T17:14:26.439Z] API call to /api/branding from ::1
+[2025-10-07T17:14:26.440Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:14:26.442Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:14:26.442Z] API call to /api/branding from ::1
+[2025-10-07T17:14:26.443Z] API call to /api/branding from ::1
+[2025-10-07T17:14:26.445Z] API call to /api/branding from ::1
+[2025-10-07T17:14:42.201Z] API call to /api/content/contact from ::1
+[2025-10-07T17:14:42.203Z] API call to /api/branding from ::1
+[2025-10-07T17:14:42.203Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:14:42.211Z] API call to /api/branding from ::1
+[2025-10-07T17:14:42.216Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:14:42.279Z] API call to /api/branding from ::1
+[2025-10-07T17:14:42.280Z] API call to /api/branding from ::1
+[2025-10-07T17:14:43.342Z] API call to /api/content/contact from ::1
+[2025-10-07T17:14:43.342Z] API call to /api/branding from ::1
+[2025-10-07T17:14:43.343Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:14:43.346Z] API call to /api/branding from ::1
+[2025-10-07T17:14:43.347Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:14:43.349Z] API call to /api/branding from ::1
+[2025-10-07T17:14:43.362Z] API call to /api/branding from ::1
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+🚀 Seven Boson CMS Backend running on port 5001
+🌍 Environment: development
+📊 Health check: http://localhost:5001/api/health
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T17:19:24.728Z] API call to /api/branding from ::1
+[2025-10-07T17:19:24.729Z] API call to /api/content/apply from ::1
+[2025-10-07T17:19:24.729Z] API call to /api/branding/footer-links from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T17:19:24.741Z] API call to /api/branding from ::1
+[2025-10-07T17:19:24.741Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:19:24.742Z] API call to /api/branding from ::1
+[2025-10-07T17:19:24.743Z] API call to /api/branding from ::1
+[2025-10-07T17:19:25.317Z] API call to /api/branding from ::1
+[2025-10-07T17:19:25.317Z] API call to /api/content/contact from ::1
+[2025-10-07T17:19:25.319Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:19:25.319Z] API call to /api/branding from ::1
+[2025-10-07T17:19:25.320Z] API call to /api/branding/footer-links from ::1
+[2025-10-07T17:19:25.320Z] API call to /api/branding from ::1
+[2025-10-07T17:19:25.322Z] API call to /api/branding from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T17:20:42.715Z] API call to /api/content/apply from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
+[2025-10-07T17:21:42.395Z] API call to /api/investments from ::1
+[2025-10-07T17:21:42.397Z] API call to /api/investments from ::1
+✅ Connected to PostgreSQL database
+✅ Connected to PostgreSQL database
